@@ -1,0 +1,156 @@
+/* -------------------------------- */
+    /*Orçamento/ CHAT BOT*/
+    .sessao-orcamento{
+        width: 100%;
+        height: 100vh;
+        background-color: #0E0B16;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .orcamento-wrapper{
+        width: 60%;
+        height: 47%;
+        background-color: #222222;
+        border-radius: 10px;
+        box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+      
+    .sessao-orcamento h1{
+        position: absolute;
+        top: -2.5rem;
+        left: 2rem;
+        
+        background: #a139cabd;
+        padding: 0 3rem;
+        color: #E7DFDD;
+        font-family: "Poppins", serif;
+        font-size: 2.5rem;
+        font-weight: bold;
+        box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+      
+    .sessao-orcamento form{
+        margin: 4rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+    
+    /*Caixa para escrever */
+    .input-field{
+        position: relative;
+        
+    }
+    
+    form .input-field{
+        margin-bottom: 1.5rem;
+    }
+    
+    .input-field .underline::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        bottom: -5px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    
+    .input-field .underline::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        bottom: -5px;
+        left: 0;
+        background: linear-gradient(45deg, #4d1c77, #4a08e0);
+        transform: scaleX(0);
+        transition: all .3s ease-in-out;
+    }
+    
+    .input-field input:focus ~ .underline::after {
+        transform: scaleX(1);
+    }
+    
+    .input-field input {
+        outline: none;
+        font-size: 0.9rem;
+        color: rgba(0, 0, 0, 0.7);
+    }
+    
+    input::placeholder {
+        background-color: #222222;
+          
+    }
+
+    input::placeholder {
+        color: rgba(250, 243, 243, 0.062);
+      }
+    
+    #btIr{
+        font-family: "Poppins", serif;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color:#E7DFDD;  /* fallback for old browsers */
+        background: #A239CA;
+        padding: 0.2rem 1.5rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 1.5rem;
+        margin-right: auto;
+        
+    }
+    
+    .banner button:hover{
+        opacity: 0.6;
+    }
+    
+    .respostaBot{
+        display: flex;
+        margin-bottom: 0.5rem;
+        /*font-family: "Special+Elite", serif;
+        /*Barrinha que pisca*/
+        margin: 0 auto;
+        color: #E7DFDD;
+        font-size: 1.0rem;
+        /*font-family: "DotGothic16", serif;
+        /*Não quebrar */
+        white-space:initial;
+        overflow: auto;
+        
+    
+    
+    }
+
+    /*
+    
+    .respostaBot {
+        animation: blinkCursor 500ms steps(40) infinite normal, typing 10s steps(10) 1s normal;
+    }
+    
+    @keyframes typing{
+        from{
+            width: 0;
+        }
+        to{
+            width: 10em;
+        }
+    }
+    
+    @keyframes blinkCursor{
+        from{
+            border-right-color: rgb(0, 0, 0);
+        }
+        to{
+            border-right-color: transparent;
+        }
+    }
+    

@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,300;1,400&display=swap');
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+/*Ajeitando imagem de fundo na tela */
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    
+}
+
+
+/*------------------------------------------------TEXTO DO INICIOOOOOOOO----------------------------------------------------- */
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #0E0B16;
+}
+
+.wrapper{
+    display: flex;
+  }
+  .wrapper .static-txt{
+    color: #E7DFDD;
+    font-family: "Poppins", serif;
+    font-size: 50px;
+    font-weight: 400;
+  }
+  .wrapper .dynamic-txts{
+    font-family: "Poppins", serif;
+    margin-left: 5px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+  }
+  .dynamic-txts li{
+    list-style: none;
+    color: #A239CA; 
+    font-size: 50px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(3) infinite;
+  }
+  @keyframes slide {
+    100%{
+      top: -270px;
+    }
+  }
+  .dynamic-txts li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+  }
+  .dynamic-txts li span::after{
+    content: "";
+   
+    left: 30;
+    height: 100%;
+    width: 100%;
+    background: #343F4F;
+    
+    animation: typing 0.5s steps(10) infinite;
+  }
+  @keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+  }
+
+/*Foto*/
+.foto{
+    position: relative;
+    height: 80%;
+    width: 35%;
+    margin-bottom: 30px;
+}
+/*ICONES SOCIAIS */
+.iconesSociais{
+	position: absolute;
+    display: flex;
+    margin-top: 2rem;
+    padding-right: 5rem;
+}
+
+.iconesSociais i{
+    color: #E7DFDD;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2rem; /*Tamanho do icone */ 
+}
+
+.iconesSociais i:hover{
+    color: #555;
+}
+/*FIM MENU LATERAL*/
+
+/*CONHECIMENTO*/
+
+section{
+    background-color: #0E0B16;
+}
+
+.sessao-conhecimentos{
+    background: #0E0B16;
+    display: flex;
+   
+}
+
+.conhecimento h1{
+    color: #A239CA;
+    font-family: "Poppins", serif;
+}
+
+.conhecimento{
+    margin: 0 1rem 1.5rem 1rem;
+}
+
+.sessao-header {
+    background: #0E0B16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sessao-header h1 {
+    font-family: "Poppins", serif;
+    font-size: 2rem;
+    color: #E7DFDD;
+    margin-top: 2rem;
+    border-bottom: solid 3px #A239CA;
+    margin-bottom: 1.5rem;
+}
+
+
+.conhecimento-text {
+    color: #E7DFDD;
+    font-family: "Poppins", serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.conhecimento-text .cor{
+    color: #00d0ff;
+}
+
+/*Area CERTIFICADOS */
+
+.titulos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", serif;
+    font-size: 1.5rem;
+    
+    color: #E7DFDD;
+    margin-top: 1.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+
+.container ul li{
+    float:left;
+    list-style: none;
+    width:40%;
+    border-radius: 20px;
+    margin :20px 0px 20px 55px; 
+    box-sizing: border-box;
+}
+.container ul li:hover{
+    opacity: 0.8;
+}
+
+.bottom p{
+    color: seashell;
+}
+
+@media screen and (max-width:1250px){
+    .container ul li{
+        width:40%;
+        margin-left: 40px;
+         
+    }
+}
+
+.card-img-certificado img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0.5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+/*Area dos projetos/PORTFOLIO */
+
+.projetos {
+    background: #0E0B16;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+  
+.card {
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+}
+  
+.card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: 0.5rem;
+}
+
+
+.card-img-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.card:hover .card-img-wrapper img {
+    opacity: 0.2;
+  }
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, 0.671);
+    transition: all 0.3s;
+
+}
+  
+.card-info h2 {
+    font-family: "Poppins", serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+}
+  
+.card-info h3 {
+    font-family: "Poppins", serif;
+    font-weight: bolder;
+    color: #ff4081;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p {
+    font-family: "Poppins", serif;
+    font-size: 0.8rem;
+    color: #eee;
+    font-weight: 400;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.card:hover .card-info{
+      bottom: 2rem;
+      opacity: 1;
+      visibility: visible;
+}
+
+.card-info button{
+    padding: 0.2rem;
+    border-radius: 1rem;
+}
+
+

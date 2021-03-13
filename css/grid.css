@@ -1,0 +1,76 @@
+.tituloHabilidades{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", serif;
+    font-size: 1.5rem;
+    color: #E7DFDD;
+    margin-top: 1.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.containerGrid{
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: minmax(100px, auto);
+    margin: 40px;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+    font-family: "Poppins", serif;
+}
+
+.containerGrid .box{
+    background: #33333340;;
+    padding: 20px;
+    display: grid;
+    font-size: 17px;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s;
+
+}
+
+.containerGrid .box:hover{
+    background: #e91e63;
+}
+
+.containerGrid .box img{
+    position: relative;
+    max-width: 90px;
+    margin-bottom: 10px;
+}
+
+.containerGrid .box:nth-child(1){
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.containerGrid .box:nth-child(2){
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.containerGrid .box:nth-child(4){
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.containerGrid .box:nth-child(5){
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+@media (max-width: 991px){
+    .containerGrid{
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        grid-template-rows: minmax(auto, auto);
+    }
+    .containerGrid .box{
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+}
+
